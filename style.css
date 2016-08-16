@@ -1,0 +1,77 @@
+/*-------------------General Styling------------------------------*/
+body {
+  background-color: #FF0000;
+}
+/*-------------------Quotation Box Styling------------------------*/
+.quotation-box {
+  position: relative;
+  display: table;
+  border-radius: 10px;
+  margin: 10% auto auto auto;
+  width: 500px;
+  padding: 40px 50px;
+  background-color: #fff;
+}
+.quote {
+  text-align: center;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 200%;
+  color: #FF0000;
+}
+.quote-author {
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 115%;
+  color: #FF0000;
+}
+#tweet-button {
+  float: left;
+  border: none;
+  border-radius: 10px;
+  color: #FFF;
+  background-color: #FF0000;
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+  text-align: center;
+  font-size: 200%;
+}
+#tweet-button:hover {
+  opacity: 0.7;
+  color: #fff;
+}
+#tweet-button:focus {
+  outline: 0;
+}
+.fa-twitter {
+  position: relative;
+  margin: 20% auto auto auto;
+}
+#new-quote-button {
+  float: right;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Droid Sans', sans-serif;
+  color: #FFF;
+  background-color: #FF0000;
+  height: 44px;
+  width: 100px;
+}
+#new-quote-button:hover {
+  opacity: 0.7;
+}
+#new-quote-button:focus {
+  outline: 0;
+}
+/*-------------------Footer Styling-------------------------------*/
+.contributions {
+  position: relative;
+  display: block;
+  margin: 20px auto auto auto;
+  width: 500px;
+  text-align: center;
+  color: #fff;
+  font-size: 85%;
+}
