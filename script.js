@@ -51,9 +51,14 @@ function getQuote () {
 		});
 	});
 }
-
+//Get Tweet Function
+function getTweet () {
+  	$('#tweet-button').attr('href', 'https://twitter.com/intent/tweet?text='+ currentQuote +'   -' + currentAuthor);
+}
 //Document ready function
 $(document).ready(function() {
 	getQuote();
+	getTweet();
 	$('#new-quote-button').click(getQuote);
+  	$('#tweet-button').click(getTweet);
 });
