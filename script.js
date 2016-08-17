@@ -56,13 +56,20 @@ function getTweet () {
   var tweetQuote = '';
   for (var i = 0; i < currentQuote.length; i++)
     {
-      if (currentQuote[i] !== ';')
+      if (currentQuote[i] !== ';' && currentQuote[i] !== '+' )
         {
           tweetQuote += currentQuote[i];
         }
       else
         {
-          tweetQuote += '%3B';
+          if (currentQuote[i] == ';')
+            {
+              tweetQuote += '%3B';
+            }
+          else
+            {
+              tweetQuote += '%2B';
+            }
         }
     }
   $('#tweet-button').attr('href', 'https://twitter.com/intent/tweet?text='+ tweetQuote +'   -' + currentAuthor);
