@@ -53,12 +53,24 @@ function getQuote () {
 }
 //Get Tweet Function
 function getTweet () {
-  	$('#tweet-button').attr('href', 'https://twitter.com/intent/tweet?text='+ currentQuote +'   -' + currentAuthor);
+  var tweetQuote = '';
+  for (var i = 0; i < currentQuote.length; i++)
+    {
+      if (currentQuote[i] !== ';')
+        {
+          tweetQuote += currentQuote[i];
+        }
+      else
+        {
+          tweetQuote += '%3B';
+        }
+    }
+  $('#tweet-button').attr('href', 'https://twitter.com/intent/tweet?text='+ tweetQuote +'   -' + currentAuthor);
 }
 //Document ready function
 $(document).ready(function() {
 	getQuote();
-	getTweet();
+  	getTweet();
 	$('#new-quote-button').click(getQuote);
   	$('#tweet-button').click(getTweet);
 });
